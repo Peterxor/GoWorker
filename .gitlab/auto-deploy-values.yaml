@@ -1,0 +1,9 @@
+service:
+  internalPort: 5566
+ingress:
+  enabled: false
+livenessProbe:
+  path: "/read-probe"
+  periodSeconds: 60
+readinessProbe:
+  path: "/read-probe"

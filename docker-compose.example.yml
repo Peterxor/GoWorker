@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  golang:
+    restart: always
+    build:
+      context: .
+    environment:
+      - DATABASE_CLIENT=mysql
+      - DATABASE_MAX_IDLE=10
+      - DATABASE_MAX_LIFE_TIME=1h
+      - DATABASE_MAX_OPEN_CONN=100
+      - DATABASE_USER=root
+      - DATABASE_PASSWORD=jtMpPWhEmK7AYZ
+      - DATABASE_HOST=172.21.0.6
+      - DATABASE_NAME=dishrank_nu2
+      - DATABASE_PORT=3306
+      - DATABASE_PARAMS=charset=utf8mb4&parseTime=True&loc=Asia%2fTaipei
+      - DATABASE_LOG_ENABLE=1
+      - CONCURRENTAMOUNT=2
+      - RABBITMQ_DOMAIN=amqp://guest:guest@dishrank:5672/
+      - LOG_ELK_ENABLE=0
+      - LOG_ELK_INDEX=dishrank-test
+      - LOG_ELK_URL=https://elasticsearch.larvata.tw
+      - LOG_LOGSTASH_ENABLE=0
+      - LOG_LOGSTASH_URL=logstash.mycompany.net:8911
+      - LOG_LOGSTASH_INDEX=dishrank-test
+      - EMAIL_API_URL=http://domain.ni.com/api/v1/email
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    hostname: dishrank-rabbitmq
+    ports:
+      - 15672:15672
+      - 5672:5672
+    restart: always

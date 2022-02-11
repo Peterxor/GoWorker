@@ -1,0 +1,124 @@
+package models
+
+import "time"
+
+type Ingredient struct {
+	Alanine                   string     `gorm:"column:alanine" json:"alanine"`
+	AlphaCarotene             string     `gorm:"column:alpha_carotene" json:"alpha_carotene"`
+	AlphaTe                   string     `gorm:"column:alpha_te" json:"alpha_te"`
+	AlphaTocopherol           string     `gorm:"column:alpha_tocopherol" json:"alpha_tocopherol"`
+	Amphetamine               string     `gorm:"column:amphetamine" json:"amphetamine"`
+	ArachidicAcid             string     `gorm:"column:arachidic_acid" json:"arachidic_acid"`
+	ArachidonicAcid           string     `gorm:"column:arachidonic_acid" json:"arachidonic_acid"`
+	Arginine                  string     `gorm:"column:arginine" json:"arginine"`
+	AsparticAcid              string     `gorm:"column:aspartic_acid" json:"aspartic_acid"`
+	BehenicAcid               string     `gorm:"column:behenic_acid" json:"behenic_acid"`
+	BetaCarotene              string     `gorm:"column:beta_carotene" json:"beta_carotene"`
+	BetaTocopherol            string     `gorm:"column:beta_tocopherol" json:"beta_tocopherol"`
+	ButyricAcid               string     `gorm:"column:butyric_acid" json:"butyric_acid"`
+	Calcium                   string     `gorm:"column:calcium" json:"calcium"`
+	CapricAcid                string     `gorm:"column:capric_acid" json:"capric_acid"`
+	CaprylicAcid              string     `gorm:"column:caprylic_acid" json:"caprylic_acid"`
+	Category                  string     `gorm:"column:category" json:"category"`
+	CategoryForSuggestion     int        `gorm:"column:category_for_suggestion" json:"category_for_suggestion"`
+	Cholesterol               string     `gorm:"column:cholesterol" json:"cholesterol"`
+	CodenoicAcid              string     `gorm:"column:codenoic_acid" json:"codenoic_acid"`
+	Copper                    string     `gorm:"column:copper" json:"copper"`
+	CreatedAt                 *time.Time `gorm:"column:created_at" json:"created_at"`
+	CrudeFat                  float32    `gorm:"column:crude_fat" json:"crude_fat"`
+	CrudeProtein              float32    `gorm:"column:crude_protein" json:"crude_protein"`
+	Cystine                   string     `gorm:"column:cystine" json:"cystine"`
+	DeletedAt                 *time.Time `gorm:"column:deleted_at" json:"deleted_at"`
+	DeltaTocopherol           string     `gorm:"column:delta_tocopherol" json:"delta_tocopherol"`
+	Description               string     `gorm:"column:description" json:"description"`
+	Dha                       string     `gorm:"column:dha" json:"dha"`
+	DietaryFiber              float32    `gorm:"column:dietary_fiber" json:"dietary_fiber"`
+	Dpa                       string     `gorm:"column:dpa" json:"dpa"`
+	Epa                       string     `gorm:"column:epa" json:"epa"`
+	ErucicAcid                string     `gorm:"column:erucic_acid" json:"erucic_acid"`
+	FattyAcidMTotal           string     `gorm:"column:fatty_acid_m_total" json:"fatty_acid_m_total"`
+	FattyAcidPTotal           string     `gorm:"column:fatty_acid_p_total" json:"fatty_acid_p_total"`
+	FattyAcidSTotal           string     `gorm:"column:fatty_acid_s_total" json:"fatty_acid_s_total"`
+	FixedKcal                 int        `gorm:"column:fixed_kcal" json:"fixed_kcal"`
+	FolicAcid                 string     `gorm:"column:folic_acid" json:"folic_acid"`
+	Fructose                  string     `gorm:"column:fructose" json:"fructose"`
+	Galactose                 string     `gorm:"column:galactose" json:"galactose"`
+	Glucose                   string     `gorm:"column:glucose" json:"glucose"`
+	Glutamate                 string     `gorm:"column:glutamate" json:"glutamate"`
+	GlutamicAcid              string     `gorm:"column:glutamic_acid" json:"glutamic_acid"`
+	Glycine                   string     `gorm:"column:glycine" json:"glycine"`
+	Gram                      int        `gorm:"column:gram" json:"gram"`
+	HeptadecanoicAcid         string     `gorm:"column:heptadecanoic_acid" json:"heptadecanoic_acid"`
+	HexanoicAcid              string     `gorm:"column:hexanoic_acid" json:"hexanoic_acid"`
+	Histidine                 string     `gorm:"column:histidine" json:"histidine"`
+	HydrolyzedAminoAcidsTotal string     `gorm:"column:hydrolyzed_amino_acids_total" json:"hydrolyzed_amino_acids_total"`
+	ID                        int64      `gorm:"column:id;primary_key" json:"id"`
+	Iron                      string     `gorm:"column:iron" json:"iron"`
+	Isoleucine                string     `gorm:"column:isoleucine" json:"isoleucine"`
+	Kcal                      int        `gorm:"column:kcal" json:"kcal"`
+	Lactose                   string     `gorm:"column:lactose" json:"lactose"`
+	LauricAcid                string     `gorm:"column:lauric_acid" json:"lauric_acid"`
+	Leucine                   string     `gorm:"column:leucine" json:"leucine"`
+	LinoleicAcid              string     `gorm:"column:linoleic_acid" json:"linoleic_acid"`
+	LinolenicAcid             string     `gorm:"column:linolenic_acid" json:"linolenic_acid"`
+	Lysine                    string     `gorm:"column:lysine" json:"lysine"`
+	Magnesium                 string     `gorm:"column:magnesium" json:"magnesium"`
+	Maltose                   string     `gorm:"column:maltose" json:"maltose"`
+	Manganese                 string     `gorm:"column:manganese" json:"manganese"`
+	Methionine                string     `gorm:"column:methionine" json:"methionine"`
+	MyristelaidicAcid         string     `gorm:"column:myristelaidic_acid" json:"myristelaidic_acid"`
+	MyristicAcid              string     `gorm:"column:myristic_acid" json:"myristic_acid"`
+	Name                      string     `gorm:"column:name" json:"name"`
+	Nicotine                  string     `gorm:"column:nicotine" json:"nicotine"`
+	NonadeicAcid              string     `gorm:"column:nonadeic_acid" json:"nonadeic_acid"`
+	OleicAcid                 string     `gorm:"column:oleic_acid" json:"oleic_acid"`
+	OtherAcid                 string     `gorm:"column:other_acid" json:"other_acid"`
+	PalmiticAcid              string     `gorm:"column:palmitic_acid" json:"palmitic_acid"`
+	PalmitoleicAcid           string     `gorm:"column:palmitoleic_acid" json:"palmitoleic_acid"`
+	PentadecanoicAcid         string     `gorm:"column:pentadecanoic_acid" json:"pentadecanoic_acid"`
+	Phosphorus                string     `gorm:"column:phosphorus" json:"phosphorus"`
+	Pms                       string     `gorm:"column:pms" json:"pms"`
+	Potassium                 string     `gorm:"column:potassium" json:"potassium"`
+	Proline                   string     `gorm:"column:proline" json:"proline"`
+	RestaurantCategory        int        `gorm:"column:restaurant_category" json:"restaurant_category"`
+	Retinol                   string     `gorm:"column:retinol" json:"retinol"`
+	RetinolEquivalent         string     `gorm:"column:retinol_equivalent" json:"retinol_equivalent"`
+	Sda                       string     `gorm:"column:sda" json:"sda"`
+	Serine                    string     `gorm:"column:serine" json:"serine"`
+	SixCategory               int        `gorm:"column:six_category" json:"six_category"`
+	Sn                        string     `gorm:"column:sn" json:"sn"`
+	Sodium                    string     `gorm:"column:sodium" json:"sodium"`
+	StearicAcid               string     `gorm:"column:stearic_acid" json:"stearic_acid"`
+	Sucrose                   string     `gorm:"column:sucrose" json:"sucrose"`
+	TotalCarbohydrate         float32    `gorm:"column:total_carbohydrate" json:"total_carbohydrate"`
+	TotalSugar                string     `gorm:"column:total_sugar" json:"total_sugar"`
+	TransFat                  string     `gorm:"column:trans_fat" json:"trans_fat"`
+	TridecanoicAcid           string     `gorm:"column:tridecanoic_acid" json:"tridecanoic_acid"`
+	Tryptophan                string     `gorm:"column:tryptophan" json:"tryptophan"`
+	TwentyFourAcid            string     `gorm:"column:twenty_four_acid" json:"twenty_four_acid"`
+	Tyrosine                  string     `gorm:"column:tyrosine" json:"tyrosine"`
+	UpdatedAt                 *time.Time `gorm:"column:updated_at" json:"updated_at"`
+	Valine                    string     `gorm:"column:valine" json:"valine"`
+	VitaminATotal             string     `gorm:"column:vitamin_a_total" json:"vitamin_a_total"`
+	VitaminB1                 string     `gorm:"column:vitamin_b1" json:"vitamin_b1"`
+	VitaminB12                string     `gorm:"column:vitamin_b12" json:"vitamin_b12"`
+	VitaminB2                 string     `gorm:"column:vitamin_b2" json:"vitamin_b2"`
+	VitaminB6                 string     `gorm:"column:vitamin_b6" json:"vitamin_b6"`
+	VitaminC                  string     `gorm:"column:vitamin_c" json:"vitamin_c"`
+	VitaminD2                 string     `gorm:"column:vitamin_d2" json:"vitamin_d2"`
+	VitaminD3                 string     `gorm:"column:vitamin_d3" json:"vitamin_d3"`
+	VitaminDTotalIu           string     `gorm:"column:vitamin_d_total_iu" json:"vitamin_d_total_iu"`
+	VitaminDTotalUg           string     `gorm:"column:vitamin_d_total_ug" json:"vitamin_d_total_ug"`
+	VitaminETotal             string     `gorm:"column:vitamin_e_total" json:"vitamin_e_total"`
+	VitaminK1                 string     `gorm:"column:vitamin_k1" json:"vitamin_k1"`
+	VitaminK2Mk4              string     `gorm:"column:vitamin_k2_mk4" json:"vitamin_k2_mk4"`
+	VitaminK2Mk7              string     `gorm:"column:vitamin_k2_mk7" json:"vitamin_k2_mk7"`
+	YTocopherol               string     `gorm:"column:y_tocopherol" json:"y_tocopherol"`
+	Zinc                      string     `gorm:"column:zinc" json:"zinc"`
+	VegInedible               int        `gorm:"column:veg_inedible" json:"veg_inedible"`
+}
+
+// TableName sets the insert table name for this struct type
+func (i *Ingredient) TableName() string {
+	return "ingredients"
+}

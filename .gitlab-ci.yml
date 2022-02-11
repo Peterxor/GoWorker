@@ -1,0 +1,2 @@
+include:
+  - remote: 'https://git.dishrank.com/-/snippets/1/raw/master/Auto-DevOps.gitlab-ci.yml'
